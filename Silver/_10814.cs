@@ -10,7 +10,8 @@ namespace Baekjoon.Silver
         static void Main(string[] args)
         {
             int num = int.Parse(Console.ReadLine());
-            (int, string)[] arr = new (int, string)[num];
+            (int, string)[] arr = new (int, string)[num]; //튜플형 배열
+            
             StringBuilder stb = new StringBuilder();
             for(int i = 0; i<num; i++)
             {
