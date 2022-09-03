@@ -1,0 +1,28 @@
+Trim 메소드 - 문자열의 앞 뒤, 공백을 제거한 문자열 반환
+string[a..b] - a부터 b까지 문자열 슬라이싱
+문자열.indexof(문자) - 문자의 인덱스 반환, 없으면 -1반환
+array.indexof(배열, 값) -배열에서 값에 해당하는 곳의 인덱스 반환, 없을 시 -1 반환. using system.linq 필요함
+문자열.split(문자) - 지정된 문자로 문자열 자름, 지정안해주면 공백이 기준
+문자열.substring(a, b) - a~b의 문자열 반환
+문자열.replace(a,b)-  문자 a를 문자 b로 변환
+int[] num = Array.ConvertAll(Console.ReadLine().Split(), int.Parse) - 배열에 정수 여러개 입력받기
+int arr = Console.ReadLine().Split().Select(int.Parse).ToArray(); - 배열으로 정수 여러개 입력받기, linq 필요
+StringBuilder a = new Stringbuilder(); - 스트링빌더, 시간,메모리 절약 및 문자열 한번에 출력하기 위해 필요
+string str = string.Concat(Enumerable.Repeat("문자열", 숫자)); - 문자열을 숫자만큼 반복해서 저장. using linq 필요.
+int[] arr = Enumerable.Repeat<int>(숫자, 길이).ToArray<int>(); - 원하는 길이만큼 배열의 값을 숫자로 초기화하며 생성, linq필요.
+문자열.contains("문자") - 문자열에 문자가 들어가 있는지 true false로 반환
+Array.sort(배열) - 오름차순으로 정렬
+Array.sort(배열, 시작인덱스, 길이) - 배열을 시작인덱스 부터 길이만큼만 정렬
+Array.sort(배열, (a, b) => 람다식) - 람다식의 반환값이 -1이면 a b 순으로, 1이면 b a 순으로 정렬.
+Array.reverse(배열) - 내림차순으로 정렬
+string.join("문자",  배열)  - 배열항목마다 문자를 추가시켜 줌
+StreamReader sr = new StreamReader(Console.OpenStandardInput());
+	메모리, 시간 덜 쓰는 입력, using system.io 필요, sr.close()로 닫아야됨
+StreamWriter sw = new StreamWriter(Console.OpenStandardOutput());
+	메모리, 시간 덜 쓰는 출력, using system.io 필요 sw.close()로 닫아야됨
+배열.Orderby(x=>x[0]).ThenBy(x=>x[1]).ToArray(); 2차원배열을 인덱스 0 기준, 그다음 기준으로 인덱스 1로 정렬. linq 필요.
+a.CompareTo(b) - a와 b를 비교, a가 크면 양수, 같으면 0, 작으면 음수 반환.
+배열.distinct() - 배열 중복값 제거, linq 필요.
+var key = dict.FirstOrDefault(x => x.Value == 값).Key; -사전의 값으로 키 찾기. linq 필요.
+bool isint = int.TryParse(문자열, out _); - 문자열이 숫자면 true 아니면 false. out은 초기화 되지 않은 정수 변수 써도됨.
+int[] num = Enumerable.Range(시작, 끝).ToArray(); - 숫자가 1씩 증가하는 배열 만듬
