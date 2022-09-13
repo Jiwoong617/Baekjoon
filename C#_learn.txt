@@ -27,3 +27,4 @@ var key = dict.FirstOrDefault(x => x.Value == 값).Key; -사전의 값으로 키
 bool isint = int.TryParse(문자열, out _); - 문자열이 숫자면 true 아니면 false. out은 초기화 되지 않은 정수 변수 써도됨.
 int[] num = Enumerable.Range(시작, 끝).ToArray(); - 숫자가 1씩 증가하는 배열 만듬
 char[] c = Console.ReadLine().ToCharArray(); - 문자배열 입력받기
+문자열.Split(delimiter, StringSplitOptions.RemoveEmptyEntries); - delimeter로 나눈 문자열 공백까지 제거
