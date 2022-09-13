@@ -28,3 +28,4 @@ bool isint = int.TryParse(문자열, out _); - 문자열이 숫자면 true 아�
 int[] num = Enumerable.Range(시작, 끝).ToArray(); - 숫자가 1씩 증가하는 배열 만듬
 char[] c = Console.ReadLine().ToCharArray(); - 문자배열 입력받기
 문자열.Split(delimiter, StringSplitOptions.RemoveEmptyEntries); - delimiter로 나눈 문자열 공백까지 제거
+List<string>이 List<int>보다 한참 느림
