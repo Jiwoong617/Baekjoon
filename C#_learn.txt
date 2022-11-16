@@ -6,7 +6,7 @@ array.indexof(배열, 값) -배열에서 값에 해당하는 곳의 인덱스 �
 문자열.substring(a, b) - a~b의 문자열 반환
 문자열.replace(a,b)-  문자 a를 문자 b로 변환
 int[] num = Array.ConvertAll(Console.ReadLine().Split(), int.Parse) - 배열에 정수 여러개 입력받기
-int arr = Console.ReadLine().Split().Select(int.Parse).ToArray(); - 배열으로 정수 여러개 입력받기, linq 필요
+int[] arr = Console.ReadLine().Split().Select(s => int.Parse(s)).ToArray(); - 배열에 정수 여러개 입력받기, linq 필요
 StringBuilder a = new Stringbuilder(); - 스트링빌더, 시간,메모리 절약 및 문자열 한번에 출력하기 위해 필요
 string str = string.Concat(Enumerable.Repeat("문자열", 숫자)); - 문자열을 숫자만큼 반복해서 저장. using linq 필요.
 int[] arr = Enumerable.Repeat<int>(숫자, 길이).ToArray<int>(); - 원하는 길이만큼 배열의 값을 숫자로 초기화하며 생성, linq필요.
