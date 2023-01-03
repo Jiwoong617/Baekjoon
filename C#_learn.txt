@@ -16,10 +16,9 @@ Array.sort(배열, 시작인덱스, 길이) - 배열을 시작인덱스 부터 �
 Array.sort(배열, (a, b) => 람다식) - 람다식의 반환값이 -1이면 a b 순으로, 1이면 b a 순으로 정렬.
 Array.reverse(배열) - 배열을 거꾸로 뒤집어줌
 string.join("문자",  배열)  - 배열항목마다 문자를 추가시켜 줌
-StreamReader sr = new StreamReader(Console.OpenStandardInput());
-	메모리, 시간 덜 쓰는 입력, using system.io 필요, sr.close()로 닫아야됨
-StreamWriter sw = new StreamWriter(Console.OpenStandardOutput());
-	메모리, 시간 덜 쓰는 출력, using system.io 필요 sw.close()로 닫아야됨
+StreamReader sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+StreamWriter sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+	메모리, 시간 덜 쓰는 입력/출력, Close()로 닫아야됨
 배열.Orderby(x=>x[0]).ThenBy(x=>x[1]).ToArray(); 2차원배열을 인덱스 0 기준, 그다음 기준으로 인덱스 1로 정렬. linq 필요.
 a.CompareTo(b) - a와 b를 비교, a가 크면 양수, 같으면 0, 작으면 음수 반환.
 배열.distinct() - 배열 중복값 제거, linq 필요.
