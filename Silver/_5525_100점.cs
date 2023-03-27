@@ -12,32 +12,28 @@ namespace Baekjoon.silver
             int n = int.Parse(Console.ReadLine());
             int len = int.Parse(Console.ReadLine());
             string s = Console.ReadLine();
-            //string io = string.Concat(Enumerable.Repeat("IO", n)) + "I";
-            //Console.WriteLine(io);
-
-            Queue<int> que = new Queue<int>();
-            for(int i = 0; i<len; i++)
-            {
-                if (s[i] == 'I')
-                    que.Enqueue(i);
-            }
-
             int ans = 0;
-            int temp = que.Dequeue(); //이전 I인덱스
+
+            int i = 0;
             int count = 0;
-            while (que.Count > 0)
+            while(i < len - 2)
             {
-                if (que.Peek() - temp == 2)
+                if (s[i..(i+3)] == "IOI")
+                {
+                    i += 2;
                     count++;
+                    if (count == n)
+                    {
+                        ans++;
+                        count--;
+                    }
+                }
                 else
+                {
+                    i++;
                     count = 0;
-
-                if (count >= n)
-                    ans++;
-
-                temp = que.Dequeue();
+                }
             }
-
             Console.WriteLine(ans);
         }
     }
